@@ -1,105 +1,73 @@
-# 개발자 프로필 랜딩페이지
+# 하네스 엔지니어링 카드뉴스
 
-하네스엔지니어링 개발자 프로필 페이지입니다.
+2026 AI 필수 키워드 "하네스 엔지니어링"을 소개하는 카드뉴스 랜딩페이지입니다.
 
-## 📁 파일 구조
+## 파일 구조
 
 ```
 harness-app/
-├── index.html      # 메인 HTML 페이지
-├── index.css       # 스타일시트
-├── index.js       # 인터랙션 및 애니메이션 스크립트
-├── agent.md       # 에이전트 정의 파일
-├── skill.md       # 기술 스택 상세 설명
-├── README.md      # 이 파일
-└── _workspace/    # 작업 디렉토리
+├── harness-eng.html    # 메인 HTML (10페이지)
+├── harness-eng.css     # 스타일시트
+├── harness-eng.js      # 인터랙션 스크립트
+├── agent.md           # 에이전트 정의 + 구현 지침
+├── setting.md         # 소셜 링크 설정
+├── qa.md              # QA 가이드라인
+└── README.md          # 이 파일
 ```
 
-## 🚀 로컬 실행 방법
+## 슬라이드 구성 (10장)
 
-### 방법 1: Python Simple HTTP Server (권장)
+1. Intro - 2026 AI 필수 키워드
+2. 하네스 엔지니어링이란?
+3. 왜 지금 하네스 엔지니어링인가?
+4. 하네스 엔지니어링 = Agent
+5. 핵심 구성 3가지
+6. 개발 방법론: Humans Steer, Agents Execute
+7. 3단계 개발 방법론
+8. 실패를 막는 자동 교정
+9. 하네스 환경 시각화
+10. 성공 사례: Stripe의 1,300개 AI PR
+
+## 로컬 실행
 
 ```bash
-# Python 3
 python -m http.server 8000
-
-# 또는
-python3 -m http.server 8000
 ```
 
-브라우저에서 http://localhost:8000 접속
+브라우저에서 http://localhost:8000/harness-eng.html 접속
 
-### 방법 2: 다른 포트 사용
+## 기능
 
-```bash
-python -m http.server 3000
-# → http://localhost:3000
-```
+- 좌→우 슬라이드 방식 페이지 이동
+- 마우스 드래그로 페이지 이동
+- 키보드 (← →, 스페이스바) 지원
+- 우측 점 네비게이션 클릭 이동
 
-### 방법 3: VS Code Live Server extension 사용
+## 소셜 링크
 
-1. VS Code에서 폴더 열기
-2. `index.html` 우클릭
-3. "Open with Live Server" 선택
+| 서비스 | URL |
+|--------|-----|
+| GitHub | https://github.com/nchime |
+| LinkedIn | https://www.linkedin.com/in/nchime |
+| Thread | https://www.threads.com/@nchime72 |
+| Facebook | https://www.facebook.com/neochime |
+| Blog | https://nchime.github.io/ |
+| Email | nchime@gmail.com |
 
----
+## QA 검사
 
-## 📝 파일 설명
+qa.md 파일을 참조하여 텍스트 품질을 유지합니다:
+- 한자 사용 금지
+- 올바른 띄어쓰기
+- 한글 문법 정상
 
-### index.html
-메인 페이지 구조
-- Hero 섹션 (이름, 타이틀)
-- About Me 섹션 (자기소개)
-- Skills 섹션 (기술 스택)
-- Projects 섹션 (프로젝트)
-- Experience 섹션 (경력)
-- Contact 섹션 (연락처)
+## 커스터마이징
 
-### index.css
-모던 개발자 테마 스타일
-- 색상: Deep Blue & Teal
-- 반응형 디자인
-- 스크롤 애니메이션
+### 텍스트 수정
+- harness-eng.html의 각 카드 내용 수정
 
-### index.js
-인터랙션 기능
-- 스킬 태그 동적 생성
-- 스크롤 reveals 애니메이션
-- 파티클 배경 효과
+### 색상 수정
+- harness-eng.css의 :root 변수 변경
 
-### agent.md
-프로필 기본 정보 정의
-
-### skill.md
-기술 스택 상세 설명 (수정 가능)
-
----
-
-## 🎨 커스터마이징
-
-### 색상 변경
-`index.css`의 `:root` 섹션에서 수정:
-```css
---primary-color: #2d3748;
---secondary-color: #319795;
---accent-color: #4fd1c5;
-```
-
-### 섹션 내용 수정
-`index.html`의 각 섹션에서 직접 수정
-
-### 스킬 태그 수정
-`index.js`의 `skills` 배열에서 추가/제거:
-```javascript
-const skills = ['JavaScript', 'TypeScript', ...];
-```
-
----
-
-## 📄 라이선스
-
-MIT License
-
----
-
-Built with **Harness Engineering** ❤️
+### 소셜 링크 수정
+- setting.md 참조하여 링크 변경
